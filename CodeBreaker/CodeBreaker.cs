@@ -29,12 +29,14 @@ namespace CodeBreaker
         int Turns = 0;
         int InternalTurns = 0;
 
+        int Difficulty = 0; // 0 -> 5 turns, 1 -> 10 turns, 2 -> 20 turns
+
         bool WinCondition = false;
 
         private void CodeBreaker_Load(object sender, EventArgs e)
         {
             // TODO: Display version number
-            //NewGame();
+            NewGame();
         }
 
         void GenerateCorrectCombination()
@@ -54,7 +56,46 @@ namespace CodeBreaker
             } while ((CorrectCombination[2] == CorrectCombination[1]) || (CorrectCombination[2] == CorrectCombination[0]));
         }
 
-        // TODO: New game
+        void NewGame()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                PlayerGuess[i] = 0;
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                ChangeButtonState(i, true);
+            }
+
+            DisableColourLabels();
+            GenerateCorrectCombination();
+            ResetButtonColours();
+
+            CorrectPlacement = 0;
+            CorrectColour = 0;
+            displayCorrectPlacement.Text = CorrectPlacement.ToString();
+            displayCorrectColour.Text = CorrectColour.ToString();
+
+            InternalTurns = 1;
+
+            switch (Difficulty)
+            {
+                case 0:
+                    Turns = 5;
+                    break;
+                case 1:
+                    Turns = 10;
+                    break;
+                case 2:
+                    Turns = 20;
+                    break;
+            }
+
+            displayTurns.Text = Turns.ToString();
+
+            WinCondition = false;
+        }
 
         void DisableColourLabels()
         {
