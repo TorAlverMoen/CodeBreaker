@@ -49,6 +49,7 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.displayVersionNumber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -273,12 +274,24 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // displayVersionNumber
+            // 
+            this.displayVersionNumber.AutoSize = true;
+            this.displayVersionNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.displayVersionNumber.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.displayVersionNumber.Location = new System.Drawing.Point(720, 437);
+            this.displayVersionNumber.Name = "displayVersionNumber";
+            this.displayVersionNumber.Size = new System.Drawing.Size(52, 15);
+            this.displayVersionNumber.TabIndex = 20;
+            this.displayVersionNumber.Text = "[version]";
+            // 
             // CodeBreaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.displayVersionNumber);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnAbout);
@@ -336,6 +349,7 @@
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label displayVersionNumber;
     }
 }
 

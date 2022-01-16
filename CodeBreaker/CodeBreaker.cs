@@ -34,7 +34,7 @@ namespace CodeBreaker
 
         private void CodeBreaker_Load(object sender, EventArgs e)
         {
-            // TODO: Display version number
+            displayVersionNumber.Text = "v" + String.Format(Application.ProductVersion);
             NewGame();
         }
 
