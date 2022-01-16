@@ -18,7 +18,6 @@ namespace CodeBreaker
         }
 
         Color[] CombinationColour = { Color.DarkRed, Color.DarkOrange, Color.DarkCyan, Color.DarkGreen, Color.DarkBlue };
-        int CombinationColourIndex = 0;
 
         int[] PlayerGuess = { 0, 0, 0 };
         int[] CorrectCombination = { 0, 0, 0 };
