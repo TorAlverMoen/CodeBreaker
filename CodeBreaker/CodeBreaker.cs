@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CodeBreaker
 {
-    public partial class Form1 : Form
+    public partial class CodeBreaker : Form
     {
-        public Form1()
+        public CodeBreaker()
         {
             InitializeComponent();
         }
