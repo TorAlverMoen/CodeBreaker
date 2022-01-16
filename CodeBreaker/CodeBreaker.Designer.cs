@@ -233,7 +233,7 @@
             this.btnDifficulty.Name = "btnDifficulty";
             this.btnDifficulty.Size = new System.Drawing.Size(150, 40);
             this.btnDifficulty.TabIndex = 16;
-            this.btnDifficulty.Text = "button1";
+            this.btnDifficulty.Text = "Change difficulty";
             this.btnDifficulty.UseVisualStyleBackColor = false;
             this.btnDifficulty.Click += new System.EventHandler(this.btnDifficulty_Click);
             // 

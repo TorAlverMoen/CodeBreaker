@@ -133,8 +133,8 @@ namespace CodeBreaker
                     break;
             }
 
-            MessageBox.Show("The difficulty is updated to " + tempDifficulty +
-                "\n\nThe difficulty change will happen next time you start a new game.",
+            MessageBox.Show("The difficulty is changed to " + tempDifficulty +
+                "\n\nYou must start a new game for change to take effect!",
                 "Change difficulty", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
