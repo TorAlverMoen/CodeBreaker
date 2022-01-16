@@ -317,17 +317,19 @@ namespace CodeBreaker
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Code Breaker\n\nThis a test puzzle for a hobbyist game project.\n\n" +
+                "Made by Tor Alver Moen\n\nVersion: " + String.Format(Application.ProductVersion), "About",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-
+            NewGame();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
