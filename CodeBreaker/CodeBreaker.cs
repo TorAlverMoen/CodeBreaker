@@ -37,7 +37,22 @@ namespace CodeBreaker
             //NewGame();
         }
 
-        // TODO: Generate correct combination
+        void GenerateCorrectCombination()
+        {
+            Random randomColour = new Random();
+
+            CorrectCombination[0] = randomColour.Next(0, 5);
+
+            do
+            {
+                CorrectCombination[1] = randomColour.Next(0, 5);
+            } while (CorrectCombination[1] == CorrectCombination[0]);
+
+            do
+            {
+                CorrectCombination[2] = randomColour.Next(0, 5);
+            } while ((CorrectCombination[2] == CorrectCombination[1]) || (CorrectCombination[2] == CorrectCombination[0]));
+        }
 
         // TODO: New game
 
