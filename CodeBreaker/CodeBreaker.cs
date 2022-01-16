@@ -259,7 +259,29 @@ namespace CodeBreaker
 
                 displayCorrectColour.Text = CorrectColour.ToString();
 
+                // Was the correct combination found?
+                if ((Turns > 0) && (CorrectPlacement == 3))
+                {
+                    MessageBox.Show("You found the correct combination!", "Success!");
+                    WinCondition = true;
+                }
 
+                // Was the correct combination not found?
+                if ((Turns == 0) && (CorrectPlacement != 3))
+                {
+                    MessageBox.Show("You did not find the correct combination!", "Failure!");
+                    WinCondition = false;
+                }
+
+                for (int i = 0; i < 5; i++)
+                {
+                    ChangeButtonState(i, true);
+                }
+
+                if (WinCondition)
+                {
+                    NewGame();
+                }
             }
         }
 
