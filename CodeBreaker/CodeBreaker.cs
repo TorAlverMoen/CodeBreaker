@@ -175,31 +175,117 @@ namespace CodeBreaker
             }
         }
 
-        // TODO: Game loop
+        void GameLoop(int ButtonIndex)
+        {
+            displayTurns.Text = Turns.ToString();
+
+            if (InternalTurns == 1)
+            {
+                DisableColourLabels();
+                ResetButtonColours();
+            }
+
+            switch (InternalTurns)
+            {
+                case 1:
+                    displayColour1.BackColor = CombinationColour[ButtonIndex];
+                    PlayerGuess[0] = ButtonIndex;
+                    ChangeButtonState(ButtonIndex, false);
+                    break;
+                case 2:
+                    displayColour2.BackColor = CombinationColour[ButtonIndex];
+                    PlayerGuess[1] = ButtonIndex;
+                    ChangeButtonState(ButtonIndex, false);
+                    break;
+                case 3:
+                    displayColour3.BackColor = CombinationColour[ButtonIndex];
+                    PlayerGuess[2] = ButtonIndex;
+                    ChangeButtonState(ButtonIndex, false);
+                    break;
+                default:
+                    MessageBox.Show("InternalTurns is an illegal number: " + InternalTurns.ToString(), "ERROR",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
+
+            InternalTurns++;
+
+            // End of turn
+            if (InternalTurns > 3)
+            {
+                InternalTurns = 1;
+                MessageBox.Show(CorrectCombination[0] + " " + CorrectCombination[1] + " " + CorrectCombination[2] + " - " +
+                    PlayerGuess[0] + " " + PlayerGuess[1] + " " + PlayerGuess[2]);
+
+                ResetButtonColours();
+
+                for (int i = 0; i < 5; i++)
+                {
+                    ChangeButtonState(i, true);
+                }
+
+                Turns--;
+                displayTurns.Text = Turns.ToString();
+
+                // How many correct colours are in the correct place?
+                CorrectPlacement = 0;
+
+                for (int i = 0; i < 3; i++)
+                {
+                    if (PlayerGuess[i] == CorrectCombination[i])
+                    {
+                        CorrectPlacement++;
+                    }
+                }
+
+                displayCorrectPlacement.Text = CorrectPlacement.ToString();
+
+                // How many correct colour are in the wrong place
+                CorrectColour = 0;
+
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        if (i != j)
+                        {
+                            if (PlayerGuess[i] == CorrectCombination[j])
+                            {
+                                CorrectColour++;
+                            }
+                        }
+                    }
+                }
+
+                displayCorrectColour.Text = CorrectColour.ToString();
+
+
+            }
+        }
 
         private void btnColour0_Click(object sender, EventArgs e)
         {
-
+            GameLoop(0);
         }
 
         private void btnColour1_Click(object sender, EventArgs e)
         {
-
+            GameLoop(1);
         }
 
         private void btnColour2_Click(object sender, EventArgs e)
         {
-
+            GameLoop(2);
         }
 
         private void btnColour3_Click(object sender, EventArgs e)
         {
-
+            GameLoop(3);
         }
 
         private void btnColour4_Click(object sender, EventArgs e)
         {
-
+            GameLoop(4);
         }
 
         private void btnDifficulty_Click(object sender, EventArgs e)
