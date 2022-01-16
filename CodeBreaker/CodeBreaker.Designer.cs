@@ -81,6 +81,7 @@
             this.btnColour0.Size = new System.Drawing.Size(100, 40);
             this.btnColour0.TabIndex = 2;
             this.btnColour0.UseVisualStyleBackColor = false;
+            this.btnColour0.Click += new System.EventHandler(this.btnColour0_Click);
             // 
             // btnColour1
             // 
@@ -92,6 +93,7 @@
             this.btnColour1.Size = new System.Drawing.Size(100, 40);
             this.btnColour1.TabIndex = 3;
             this.btnColour1.UseVisualStyleBackColor = false;
+            this.btnColour1.Click += new System.EventHandler(this.btnColour1_Click);
             // 
             // btnColour2
             // 
@@ -103,6 +105,7 @@
             this.btnColour2.Size = new System.Drawing.Size(100, 40);
             this.btnColour2.TabIndex = 4;
             this.btnColour2.UseVisualStyleBackColor = false;
+            this.btnColour2.Click += new System.EventHandler(this.btnColour2_Click);
             // 
             // btnColour3
             // 
@@ -114,6 +117,7 @@
             this.btnColour3.Size = new System.Drawing.Size(100, 40);
             this.btnColour3.TabIndex = 5;
             this.btnColour3.UseVisualStyleBackColor = false;
+            this.btnColour3.Click += new System.EventHandler(this.btnColour3_Click);
             // 
             // btnColour4
             // 
@@ -125,6 +129,7 @@
             this.btnColour4.Size = new System.Drawing.Size(100, 40);
             this.btnColour4.TabIndex = 6;
             this.btnColour4.UseVisualStyleBackColor = false;
+            this.btnColour4.Click += new System.EventHandler(this.btnColour4_Click);
             // 
             // displayColour1
             // 
@@ -227,6 +232,7 @@
             this.btnDifficulty.TabIndex = 16;
             this.btnDifficulty.Text = "button1";
             this.btnDifficulty.UseVisualStyleBackColor = false;
+            this.btnDifficulty.Click += new System.EventHandler(this.btnDifficulty_Click);
             // 
             // btnAbout
             // 
@@ -239,6 +245,7 @@
             this.btnAbout.TabIndex = 17;
             this.btnAbout.Text = "button2";
             this.btnAbout.UseVisualStyleBackColor = false;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnNewGame
             // 
@@ -251,6 +258,7 @@
             this.btnNewGame.TabIndex = 18;
             this.btnNewGame.Text = "button3";
             this.btnNewGame.UseVisualStyleBackColor = false;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // btnExit
             // 
@@ -263,6 +271,7 @@
             this.btnExit.TabIndex = 19;
             this.btnExit.Text = "button4";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // CodeBreaker
             // 
@@ -299,6 +308,7 @@
             this.Name = "CodeBreaker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Breaker";
+            this.Load += new System.EventHandler(this.CodeBreaker_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
