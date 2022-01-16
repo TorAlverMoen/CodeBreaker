@@ -239,8 +239,8 @@ namespace CodeBreaker
             if (InternalTurns > 3)
             {
                 InternalTurns = 1;
-                MessageBox.Show(CorrectCombination[0] + " " + CorrectCombination[1] + " " + CorrectCombination[2] + " - " +
-                    PlayerGuess[0] + " " + PlayerGuess[1] + " " + PlayerGuess[2]);
+                /*MessageBox.Show(CorrectCombination[0] + " " + CorrectCombination[1] + " " + CorrectCombination[2] + " - " +
+                    PlayerGuess[0] + " " + PlayerGuess[1] + " " + PlayerGuess[2]);*/
 
                 ResetButtonColours();
 
