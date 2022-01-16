@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CodeBreaker
@@ -82,12 +76,15 @@ namespace CodeBreaker
             {
                 case 0:
                     Turns = 5;
+                    displayDifficulty.Text = "Difficult";
                     break;
                 case 1:
                     Turns = 10;
+                    displayDifficulty.Text = "Moderate";
                     break;
                 case 2:
                     Turns = 20;
+                    displayDifficulty.Text = "Easy";
                     break;
             }
 
@@ -110,6 +107,35 @@ namespace CodeBreaker
             btnColour2.BackColor = CombinationColour[2];
             btnColour3.BackColor = CombinationColour[3];
             btnColour4.BackColor = CombinationColour[4];
+        }
+
+        void ChangeDifficulty()
+        {
+            String tempDifficulty = "";
+
+            Difficulty++;
+
+            if (Difficulty > 2)
+            {
+                Difficulty = 0;
+            }
+
+            switch (Difficulty)
+            {
+                case 0:
+                    tempDifficulty = "Difficult";
+                    break;
+                case 1:
+                    tempDifficulty = "Moderate";
+                    break;
+                case 2:
+                    tempDifficulty = "Easy";
+                    break;
+            }
+
+            MessageBox.Show("The difficulty is updated to " + tempDifficulty +
+                "\n\nThe difficulty change will happen next time you start a new game.",
+                "Change difficulty", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         void ChangeButtonState(int Index, bool NewState)
@@ -311,7 +337,7 @@ namespace CodeBreaker
 
         private void btnDifficulty_Click(object sender, EventArgs e)
         {
-
+            ChangeDifficulty();
         }
 
         private void btnAbout_Click(object sender, EventArgs e)

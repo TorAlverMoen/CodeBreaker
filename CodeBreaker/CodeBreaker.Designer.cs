@@ -50,6 +50,8 @@
             this.btnNewGame = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.displayVersionNumber = new System.Windows.Forms.Label();
+            this.labelDifficulty = new System.Windows.Forms.Label();
+            this.displayDifficulty = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -285,12 +287,32 @@
             this.displayVersionNumber.TabIndex = 20;
             this.displayVersionNumber.Text = "[version]";
             // 
+            // labelDifficulty
+            // 
+            this.labelDifficulty.AutoSize = true;
+            this.labelDifficulty.Location = new System.Drawing.Point(234, 313);
+            this.labelDifficulty.Name = "labelDifficulty";
+            this.labelDifficulty.Size = new System.Drawing.Size(98, 17);
+            this.labelDifficulty.TabIndex = 21;
+            this.labelDifficulty.Text = "Difficulty level:";
+            // 
+            // displayDifficulty
+            // 
+            this.displayDifficulty.AutoSize = true;
+            this.displayDifficulty.Location = new System.Drawing.Point(339, 313);
+            this.displayDifficulty.Name = "displayDifficulty";
+            this.displayDifficulty.Size = new System.Drawing.Size(67, 17);
+            this.displayDifficulty.TabIndex = 22;
+            this.displayDifficulty.Text = "[difficulty]";
+            // 
             // CodeBreaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.displayDifficulty);
+            this.Controls.Add(this.labelDifficulty);
             this.Controls.Add(this.displayVersionNumber);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNewGame);
@@ -350,6 +372,8 @@
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label displayVersionNumber;
+        private System.Windows.Forms.Label labelDifficulty;
+        private System.Windows.Forms.Label displayDifficulty;
     }
 }
 
