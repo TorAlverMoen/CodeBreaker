@@ -229,7 +229,7 @@
             this.btnDifficulty.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnDifficulty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDifficulty.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDifficulty.Location = new System.Drawing.Point(80, 400);
+            this.btnDifficulty.Location = new System.Drawing.Point(80, 380);
             this.btnDifficulty.Name = "btnDifficulty";
             this.btnDifficulty.Size = new System.Drawing.Size(150, 40);
             this.btnDifficulty.TabIndex = 16;
@@ -242,7 +242,7 @@
             this.btnAbout.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAbout.Location = new System.Drawing.Point(240, 400);
+            this.btnAbout.Location = new System.Drawing.Point(240, 380);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(150, 40);
             this.btnAbout.TabIndex = 17;
@@ -255,7 +255,7 @@
             this.btnNewGame.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewGame.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNewGame.Location = new System.Drawing.Point(400, 400);
+            this.btnNewGame.Location = new System.Drawing.Point(400, 380);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(150, 40);
             this.btnNewGame.TabIndex = 18;
@@ -268,7 +268,7 @@
             this.btnExit.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnExit.Location = new System.Drawing.Point(560, 400);
+            this.btnExit.Location = new System.Drawing.Point(560, 380);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(150, 40);
             this.btnExit.TabIndex = 19;
