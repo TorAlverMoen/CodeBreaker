@@ -175,14 +175,14 @@
             this.labelCorrectPlacement.AutoSize = true;
             this.labelCorrectPlacement.Location = new System.Drawing.Point(234, 243);
             this.labelCorrectPlacement.Name = "labelCorrectPlacement";
-            this.labelCorrectPlacement.Size = new System.Drawing.Size(272, 17);
+            this.labelCorrectPlacement.Size = new System.Drawing.Size(340, 17);
             this.labelCorrectPlacement.TabIndex = 10;
-            this.labelCorrectPlacement.Text = "Colours in the code and the correct place:";
+            this.labelCorrectPlacement.Text = "Number of colours in the code and the correct place:";
             // 
             // displayCorrectPlacement
             // 
             this.displayCorrectPlacement.AutoSize = true;
-            this.displayCorrectPlacement.Location = new System.Drawing.Point(514, 243);
+            this.displayCorrectPlacement.Location = new System.Drawing.Point(585, 243);
             this.displayCorrectPlacement.Name = "displayCorrectPlacement";
             this.displayCorrectPlacement.Size = new System.Drawing.Size(50, 17);
             this.displayCorrectPlacement.TabIndex = 11;
@@ -193,14 +193,14 @@
             this.labelCorrectColour.AutoSize = true;
             this.labelCorrectColour.Location = new System.Drawing.Point(234, 263);
             this.labelCorrectColour.Name = "labelCorrectColour";
-            this.labelCorrectColour.Size = new System.Drawing.Size(277, 17);
+            this.labelCorrectColour.Size = new System.Drawing.Size(345, 17);
             this.labelCorrectColour.TabIndex = 12;
-            this.labelCorrectColour.Text = "Colours in the code but in the wrong place:";
+            this.labelCorrectColour.Text = "Number of colours in the code but in the wrong place:";
             // 
             // displayCorrectColour
             // 
             this.displayCorrectColour.AutoSize = true;
-            this.displayCorrectColour.Location = new System.Drawing.Point(514, 263);
+            this.displayCorrectColour.Location = new System.Drawing.Point(585, 263);
             this.displayCorrectColour.Name = "displayCorrectColour";
             this.displayCorrectColour.Size = new System.Drawing.Size(55, 17);
             this.displayCorrectColour.TabIndex = 13;
