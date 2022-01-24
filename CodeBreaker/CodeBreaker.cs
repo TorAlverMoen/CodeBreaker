@@ -24,7 +24,7 @@ namespace CodeBreaker
 
         int Difficulty = 0; // 0 -> 5 turns, 1 -> 10 turns, 2 -> 20 turns
 
-        bool WinCondition = false;
+        bool EndOfGame = false;
 
         private void CodeBreaker_Load(object sender, EventArgs e)
         {
@@ -90,7 +90,7 @@ namespace CodeBreaker
 
             displayTurns.Text = Turns.ToString();
 
-            WinCondition = false;
+            EndOfGame = false;
         }
 
         void DisableColourLabels()
@@ -288,14 +288,14 @@ namespace CodeBreaker
                 if ((Turns > 0) && (CorrectPlacement == 3))
                 {
                     MessageBox.Show("You found the correct combination!", "Success!");
-                    WinCondition = true;
+                    EndOfGame = true;
                 }
 
                 // Was the correct combination not found?
                 if ((Turns == 0) && (CorrectPlacement != 3))
                 {
                     MessageBox.Show("You did not find the correct combination!", "Failure!");
-                    WinCondition = false;
+                    EndOfGame = true;
                 }
 
                 for (int i = 0; i < 5; i++)
@@ -303,7 +303,7 @@ namespace CodeBreaker
                     ChangeButtonState(i, true);
                 }
 
-                if (WinCondition)
+                if (EndOfGame)
                 {
                     NewGame();
                 }
