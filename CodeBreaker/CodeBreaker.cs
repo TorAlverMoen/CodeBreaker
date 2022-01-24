@@ -25,6 +25,7 @@ namespace CodeBreaker
         int Difficulty = 0; // 0 -> 5 turns, 1 -> 10 turns, 2 -> 20 turns
 
         bool EndOfGame = false;
+        bool IsNewGameStarted = false;
 
         private void CodeBreaker_Load(object sender, EventArgs e)
         {
@@ -91,6 +92,7 @@ namespace CodeBreaker
             displayTurns.Text = Turns.ToString();
 
             EndOfGame = false;
+            IsNewGameStarted = true;
         }
 
         void DisableColourLabels()
@@ -133,9 +135,18 @@ namespace CodeBreaker
                     break;
             }
 
-            MessageBox.Show("The difficulty is changed to " + tempDifficulty +
-                "\n\nYou must start a new game for change to take effect!",
-                "Change difficulty", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (IsNewGameStarted)
+            {
+                MessageBox.Show("The difficulty is changed to " + tempDifficulty, "Change difficulty",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                NewGame();
+            }
+            else
+            {
+                MessageBox.Show("The difficulty is changed to " + tempDifficulty +
+                    "\n\nYou must start a new game for change to take effect!",
+                    "Change difficulty", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         void ChangeButtonState(int Index, bool NewState)
@@ -203,6 +214,11 @@ namespace CodeBreaker
         void GameLoop(int ButtonIndex)
         {
             displayTurns.Text = Turns.ToString();
+
+            if (IsNewGameStarted)
+            {
+                IsNewGameStarted = false;
+            }
 
             if (InternalTurns == 1)
             {
