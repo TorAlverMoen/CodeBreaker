@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace CodeBreaker
@@ -29,7 +30,8 @@ namespace CodeBreaker
 
         private void CodeBreaker_Load(object sender, EventArgs e)
         {
-            displayVersionNumber.Text = "v" + String.Format(Application.ProductVersion);
+            displayVersionNumber.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            //displayVersionNumber.Text = "v" + String.Format(Application.ProductVersion);
             NewGame();
         }
 
@@ -359,8 +361,8 @@ namespace CodeBreaker
         private void btnAbout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Code Breaker\n\nThis a test puzzle for a hobbyist game project.\n\n" +
-                "Made by Tor Alver Moen\n\nVersion: " + String.Format(Application.ProductVersion), "About",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "Made by Tor Alver Moen\n\nVersion: " + Assembly.GetExecutingAssembly().GetName().Version,
+                "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
