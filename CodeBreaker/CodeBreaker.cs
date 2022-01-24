@@ -301,7 +301,7 @@ namespace CodeBreaker
                 displayCorrectColour.Text = CorrectColour.ToString();
 
                 // Was the correct combination found?
-                if ((Turns > 0) && (CorrectPlacement == 3))
+                if ((Turns >= 0) && (CorrectPlacement == 3))
                 {
                     MessageBox.Show("You found the correct combination!", "Success!");
                     EndOfGame = true;
