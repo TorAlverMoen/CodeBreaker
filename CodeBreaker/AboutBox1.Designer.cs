@@ -143,6 +143,7 @@
             this.okButton.TabIndex = 24;
             this.okButton.Text = "&OK";
             this.okButton.UseVisualStyleBackColor = false;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // AboutBox1
             // 
