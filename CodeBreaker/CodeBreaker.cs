@@ -360,9 +360,8 @@ namespace CodeBreaker
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Code Breaker\n\nThis a test puzzle for a hobbyist game project.\n\n" +
-                "Made by Tor Alver Moen\n\nVersion: " + Assembly.GetExecutingAssembly().GetName().Version,
-                "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            AboutBox1 aboutBox = new AboutBox1();
+            aboutBox.Show();
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)

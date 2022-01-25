@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CodeBreaker")]
-[assembly: AssemblyDescription("A dry run for a puzzle that could be included in a hobbiyst project")]
+[assembly: AssemblyTitle("Code Breaker")]
+[assembly: AssemblyDescription("This a test puzzle for a hobbyist game project.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Toramo")]
-[assembly: AssemblyProduct("CodeBreaker")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyCompany("Toramo, org.nr. 993 805 874")]
+[assembly: AssemblyProduct("Code Breaker")]
+[assembly: AssemblyCopyright("Made by Tor Alver Moen, 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
