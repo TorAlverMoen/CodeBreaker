@@ -12,6 +12,7 @@ namespace CodeBreaker
             InitializeComponent();
         }
 
+        // The colours the player can choose from
         Color[] CombinationColour = { Color.DarkRed, Color.DarkOrange, Color.DarkCyan, Color.DarkGreen, Color.DarkBlue };
 
         int[] PlayerGuess = { 0, 0, 0 };
@@ -23,7 +24,7 @@ namespace CodeBreaker
         int Turns = 0;
         int InternalTurns = 0;
 
-        int Difficulty = 0; // 0 -> 5 turns, 1 -> 10 turns, 2 -> 20 turns
+        int Difficulty = 0;     // 0 (easy) -> 5 turns, 1 (moderate) -> 10 turns, 2 (difficult) -> 20 turns
 
         bool EndOfGame = false;
         bool IsNewGameStarted = false;
@@ -39,13 +40,16 @@ namespace CodeBreaker
         {
             Random randomColour = new Random();
 
+            // Generate first colour
             CorrectCombination[0] = randomColour.Next(0, 5);
 
+            // Genereate the second colour (random colour except the first)
             do
             {
                 CorrectCombination[1] = randomColour.Next(0, 5);
             } while (CorrectCombination[1] == CorrectCombination[0]);
 
+            // Generate the third colour (random colour except the first two)
             do
             {
                 CorrectCombination[2] = randomColour.Next(0, 5);
@@ -54,20 +58,25 @@ namespace CodeBreaker
 
         void NewGame()
         {
+            // Reset player guess array
             for (int i = 0; i < 3; i++)
             {
                 PlayerGuess[i] = 0;
             }
 
+            // Enable all buttons
             for (int i = 0; i < 3; i++)
             {
                 ChangeButtonState(i, true);
             }
 
+            // Reset colour labels and reset button colours
             DisableColourLabels();
-            GenerateCorrectCombination();
             ResetButtonColours();
 
+            GenerateCorrectCombination();
+
+            // Display current number of correct and correctly placed colours
             CorrectPlacement = 0;
             CorrectColour = 0;
             displayCorrectPlacement.Text = CorrectPlacement.ToString();
@@ -79,20 +88,22 @@ namespace CodeBreaker
             {
                 case 0:
                     Turns = 5;
-                    displayDifficulty.Text = "Difficult";
+                    displayDifficulty.Text = "difficult";
                     break;
                 case 1:
                     Turns = 10;
-                    displayDifficulty.Text = "Moderate";
+                    displayDifficulty.Text = "moderate";
                     break;
                 case 2:
                     Turns = 20;
-                    displayDifficulty.Text = "Easy";
+                    displayDifficulty.Text = "easy";
                     break;
             }
 
+            // Display the remaining number of turns
             displayTurns.Text = Turns.ToString();
 
+            // Status variables for current game
             EndOfGame = false;
             IsNewGameStarted = true;
         }
@@ -137,6 +148,7 @@ namespace CodeBreaker
                     break;
             }
 
+            // Change the difficulty (update automatically if a new game was just started)
             if (IsNewGameStarted)
             {
                 MessageBox.Show("The difficulty is changed to " + tempDifficulty, "Change difficulty",
@@ -151,6 +163,7 @@ namespace CodeBreaker
             }
         }
 
+        // Enable or disable a button based on index
         void ChangeButtonState(int Index, bool NewState)
         {
             switch (Index)
@@ -213,6 +226,7 @@ namespace CodeBreaker
             }
         }
 
+        // This is run every time a player chooses a colour
         void GameLoop(int ButtonIndex)
         {
             displayTurns.Text = Turns.ToString();
@@ -257,7 +271,9 @@ namespace CodeBreaker
             if (InternalTurns > 3)
             {
                 InternalTurns = 1;
-                /*MessageBox.Show(CorrectCombination[0] + " " + CorrectCombination[1] + " " + CorrectCombination[2] + " - " +
+
+                /* Used for debugging: This will display the correct combination and the current player choice
+                 * MessageBox.Show(CorrectCombination[0] + " " + CorrectCombination[1] + " " + CorrectCombination[2] + " - " +
                     PlayerGuess[0] + " " + PlayerGuess[1] + " " + PlayerGuess[2]);*/
 
                 ResetButtonColours();
@@ -316,11 +332,13 @@ namespace CodeBreaker
                     EndOfGame = true;
                 }
 
+                // Enable all buttons
                 for (int i = 0; i < 5; i++)
                 {
                     ChangeButtonState(i, true);
                 }
 
+                // If the current game is finished, start a new one
                 if (EndOfGame)
                 {
                     NewGame();
