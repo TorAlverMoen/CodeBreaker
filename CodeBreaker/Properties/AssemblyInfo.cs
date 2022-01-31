@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Code Breaker")]
-[assembly: AssemblyDescription("This a test puzzle for a hobbyist game project.")]
+[assembly: AssemblyDescription("This a test puzzle for an experimental hobbyist game project.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Toramo, org.nr. 993 805 874")]
 [assembly: AssemblyProduct("Code Breaker")]
