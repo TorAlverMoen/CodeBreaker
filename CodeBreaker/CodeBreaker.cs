@@ -242,6 +242,7 @@ namespace CodeBreaker
                 ResetButtonColours();
             }
 
+            // TODO: This should be a loop
             switch (InternalTurns)
             {
                 case 1:
