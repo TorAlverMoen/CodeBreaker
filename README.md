@@ -1,4 +1,4 @@
 # Code Breaker
- A 'dry run' for a puzzle that could be included in a hobbyist game project.
+I am working on a puzzle game and this is a "dry run" for one of the puzzles.
 
-This version is developed in Visual Studio 2022.
+(Visual Studio 2022)
