@@ -226,7 +226,7 @@ namespace CodeBreaker
             }
         }
 
-        // This is run every time a player chooses a colour
+        // This is called every time the player chooses a colour
         void GameLoop(int ButtonIndex)
         {
             displayTurns.Text = Turns.ToString();
@@ -242,7 +242,6 @@ namespace CodeBreaker
                 ResetButtonColours();
             }
 
-            // TODO: This should be a loop
             switch (InternalTurns)
             {
                 case 1:
@@ -300,7 +299,7 @@ namespace CodeBreaker
 
                 displayCorrectPlacement.Text = CorrectPlacement.ToString();
 
-                // How many correct colour are in the wrong place
+                // How many correct colours are in the wrong place
                 CorrectColour = 0;
 
                 for (int i = 0; i < 3; i++)
