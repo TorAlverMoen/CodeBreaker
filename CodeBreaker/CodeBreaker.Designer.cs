@@ -329,6 +329,7 @@
             this.btnColour5.Size = new System.Drawing.Size(100, 40);
             this.btnColour5.TabIndex = 24;
             this.btnColour5.UseVisualStyleBackColor = false;
+            this.btnColour5.Click += new System.EventHandler(this.btnColour5_Click);
             // 
             // CodeBreaker
             // 

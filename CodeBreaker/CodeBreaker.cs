@@ -71,7 +71,7 @@ namespace CodeBreaker
             }
 
             // Enable all buttons
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 6; i++)
             {
                 ChangeButtonState(i, true);
             }
@@ -232,14 +232,14 @@ namespace CodeBreaker
                     }
                     break;
                 case 5:
-                    btnColour4.Enabled = NewState;
+                    btnColour5.Enabled = NewState;
                     if (NewState)
                     {
-                        btnColour4.BackColor = CombinationColour[5];
+                        btnColour5.BackColor = CombinationColour[5];
                     }
                     else
                     {
-                        btnColour4.BackColor = Color.FromArgb(64, 64, 64);
+                        btnColour5.BackColor = Color.FromArgb(64, 64, 64);
                     }
                     break;
             }
@@ -393,6 +393,11 @@ namespace CodeBreaker
         private void btnColour4_Click(object sender, EventArgs e)
         {
             GameLoop(4);
+        }
+
+        private void btnColour5_Click(object sender, EventArgs e)
+        {
+            GameLoop(5);
         }
 
         private void btnDifficulty_Click(object sender, EventArgs e)
