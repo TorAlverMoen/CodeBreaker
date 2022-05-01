@@ -70,7 +70,7 @@
             // labelChooseColour
             // 
             this.labelChooseColour.AutoSize = true;
-            this.labelChooseColour.Location = new System.Drawing.Point(74, 43);
+            this.labelChooseColour.Location = new System.Drawing.Point(60, 43);
             this.labelChooseColour.Name = "labelChooseColour";
             this.labelChooseColour.Size = new System.Drawing.Size(103, 17);
             this.labelChooseColour.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.btnColour0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnColour0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColour0.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnColour0.Location = new System.Drawing.Point(74, 73);
+            this.btnColour0.Location = new System.Drawing.Point(60, 73);
             this.btnColour0.Name = "btnColour0";
             this.btnColour0.Size = new System.Drawing.Size(100, 40);
             this.btnColour0.TabIndex = 2;
@@ -93,7 +93,7 @@
             this.btnColour1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnColour1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColour1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnColour1.Location = new System.Drawing.Point(74, 119);
+            this.btnColour1.Location = new System.Drawing.Point(60, 119);
             this.btnColour1.Name = "btnColour1";
             this.btnColour1.Size = new System.Drawing.Size(100, 40);
             this.btnColour1.TabIndex = 3;
@@ -105,7 +105,7 @@
             this.btnColour2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnColour2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColour2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnColour2.Location = new System.Drawing.Point(74, 165);
+            this.btnColour2.Location = new System.Drawing.Point(60, 165);
             this.btnColour2.Name = "btnColour2";
             this.btnColour2.Size = new System.Drawing.Size(100, 40);
             this.btnColour2.TabIndex = 4;
@@ -117,7 +117,7 @@
             this.btnColour3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnColour3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColour3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnColour3.Location = new System.Drawing.Point(74, 211);
+            this.btnColour3.Location = new System.Drawing.Point(60, 211);
             this.btnColour3.Name = "btnColour3";
             this.btnColour3.Size = new System.Drawing.Size(100, 40);
             this.btnColour3.TabIndex = 5;
@@ -129,7 +129,7 @@
             this.btnColour4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnColour4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColour4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnColour4.Location = new System.Drawing.Point(74, 257);
+            this.btnColour4.Location = new System.Drawing.Point(60, 257);
             this.btnColour4.Name = "btnColour4";
             this.btnColour4.Size = new System.Drawing.Size(100, 40);
             this.btnColour4.TabIndex = 6;
@@ -141,7 +141,7 @@
             this.displayColour1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.displayColour1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.displayColour1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.displayColour1.Location = new System.Drawing.Point(234, 73);
+            this.displayColour1.Location = new System.Drawing.Point(200, 73);
             this.displayColour1.Name = "displayColour1";
             this.displayColour1.Size = new System.Drawing.Size(150, 150);
             this.displayColour1.TabIndex = 7;
@@ -153,7 +153,7 @@
             this.displayColour2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.displayColour2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.displayColour2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.displayColour2.Location = new System.Drawing.Point(390, 73);
+            this.displayColour2.Location = new System.Drawing.Point(356, 73);
             this.displayColour2.Name = "displayColour2";
             this.displayColour2.Size = new System.Drawing.Size(150, 150);
             this.displayColour2.TabIndex = 8;
@@ -165,7 +165,7 @@
             this.displayColour3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.displayColour3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.displayColour3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.displayColour3.Location = new System.Drawing.Point(546, 73);
+            this.displayColour3.Location = new System.Drawing.Point(512, 73);
             this.displayColour3.Name = "displayColour3";
             this.displayColour3.Size = new System.Drawing.Size(150, 150);
             this.displayColour3.TabIndex = 9;
@@ -175,7 +175,7 @@
             // labelCorrectPlacement
             // 
             this.labelCorrectPlacement.AutoSize = true;
-            this.labelCorrectPlacement.Location = new System.Drawing.Point(234, 243);
+            this.labelCorrectPlacement.Location = new System.Drawing.Point(200, 243);
             this.labelCorrectPlacement.Name = "labelCorrectPlacement";
             this.labelCorrectPlacement.Size = new System.Drawing.Size(340, 17);
             this.labelCorrectPlacement.TabIndex = 10;
@@ -184,7 +184,7 @@
             // displayCorrectPlacement
             // 
             this.displayCorrectPlacement.AutoSize = true;
-            this.displayCorrectPlacement.Location = new System.Drawing.Point(585, 243);
+            this.displayCorrectPlacement.Location = new System.Drawing.Point(550, 243);
             this.displayCorrectPlacement.Name = "displayCorrectPlacement";
             this.displayCorrectPlacement.Size = new System.Drawing.Size(50, 17);
             this.displayCorrectPlacement.TabIndex = 11;
@@ -193,7 +193,7 @@
             // labelCorrectColour
             // 
             this.labelCorrectColour.AutoSize = true;
-            this.labelCorrectColour.Location = new System.Drawing.Point(234, 263);
+            this.labelCorrectColour.Location = new System.Drawing.Point(200, 263);
             this.labelCorrectColour.Name = "labelCorrectColour";
             this.labelCorrectColour.Size = new System.Drawing.Size(345, 17);
             this.labelCorrectColour.TabIndex = 12;
@@ -202,7 +202,7 @@
             // displayCorrectColour
             // 
             this.displayCorrectColour.AutoSize = true;
-            this.displayCorrectColour.Location = new System.Drawing.Point(585, 263);
+            this.displayCorrectColour.Location = new System.Drawing.Point(550, 263);
             this.displayCorrectColour.Name = "displayCorrectColour";
             this.displayCorrectColour.Size = new System.Drawing.Size(55, 17);
             this.displayCorrectColour.TabIndex = 13;
@@ -211,7 +211,7 @@
             // labelTurns
             // 
             this.labelTurns.AutoSize = true;
-            this.labelTurns.Location = new System.Drawing.Point(234, 293);
+            this.labelTurns.Location = new System.Drawing.Point(200, 293);
             this.labelTurns.Name = "labelTurns";
             this.labelTurns.Size = new System.Drawing.Size(178, 17);
             this.labelTurns.TabIndex = 14;
@@ -220,7 +220,7 @@
             // displayTurns
             // 
             this.displayTurns.AutoSize = true;
-            this.displayTurns.Location = new System.Drawing.Point(419, 293);
+            this.displayTurns.Location = new System.Drawing.Point(380, 293);
             this.displayTurns.Name = "displayTurns";
             this.displayTurns.Size = new System.Drawing.Size(43, 17);
             this.displayTurns.TabIndex = 15;
@@ -292,16 +292,16 @@
             // labelDifficulty
             // 
             this.labelDifficulty.AutoSize = true;
-            this.labelDifficulty.Location = new System.Drawing.Point(234, 313);
+            this.labelDifficulty.Location = new System.Drawing.Point(200, 313);
             this.labelDifficulty.Name = "labelDifficulty";
-            this.labelDifficulty.Size = new System.Drawing.Size(98, 17);
+            this.labelDifficulty.Size = new System.Drawing.Size(167, 17);
             this.labelDifficulty.TabIndex = 21;
-            this.labelDifficulty.Text = "Difficulty level:";
+            this.labelDifficulty.Text = "Difficulty level is currently";
             // 
             // displayDifficulty
             // 
             this.displayDifficulty.AutoSize = true;
-            this.displayDifficulty.Location = new System.Drawing.Point(339, 313);
+            this.displayDifficulty.Location = new System.Drawing.Point(363, 313);
             this.displayDifficulty.Name = "displayDifficulty";
             this.displayDifficulty.Size = new System.Drawing.Size(67, 17);
             this.displayDifficulty.TabIndex = 22;
@@ -312,7 +312,7 @@
             this.displayColour4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.displayColour4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.displayColour4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.displayColour4.Location = new System.Drawing.Point(702, 73);
+            this.displayColour4.Location = new System.Drawing.Point(668, 73);
             this.displayColour4.Name = "displayColour4";
             this.displayColour4.Size = new System.Drawing.Size(150, 150);
             this.displayColour4.TabIndex = 23;
@@ -324,7 +324,7 @@
             this.btnColour5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnColour5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColour5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnColour5.Location = new System.Drawing.Point(74, 303);
+            this.btnColour5.Location = new System.Drawing.Point(60, 303);
             this.btnColour5.Name = "btnColour5";
             this.btnColour5.Size = new System.Drawing.Size(100, 40);
             this.btnColour5.TabIndex = 24;
