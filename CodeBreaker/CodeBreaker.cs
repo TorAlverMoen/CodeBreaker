@@ -13,10 +13,10 @@ namespace CodeBreaker
         }
 
         // The colours the player can choose from
-        Color[] CombinationColour = { Color.DarkRed, Color.DarkOrange, Color.DarkCyan, Color.DarkGreen, Color.DarkBlue };
+        Color[] CombinationColour = { Color.DarkRed, Color.DarkOrange, Color.DarkCyan, Color.DarkGreen, Color.DarkBlue, Color.DarkViolet };
 
-        int[] PlayerGuess = { 0, 0, 0 };
-        int[] CorrectCombination = { 0, 0, 0 };
+        int[] PlayerGuess = { 0, 0, 0, 0 };
+        int[] CorrectCombination = { 0, 0, 0, 0 };
 
         int CorrectPlacement = 0;
         int CorrectColour = 0;
@@ -41,31 +41,37 @@ namespace CodeBreaker
             Random randomColour = new Random();
 
             // Generate first colour
-            CorrectCombination[0] = randomColour.Next(0, 5);
+            CorrectCombination[0] = randomColour.Next(0, 6);
 
             // Genereate the second colour (random colour except the first)
             do
             {
-                CorrectCombination[1] = randomColour.Next(0, 5);
+                CorrectCombination[1] = randomColour.Next(0, 6);
             } while (CorrectCombination[1] == CorrectCombination[0]);
 
             // Generate the third colour (random colour except the first two)
             do
             {
-                CorrectCombination[2] = randomColour.Next(0, 5);
+                CorrectCombination[2] = randomColour.Next(0, 6);
             } while ((CorrectCombination[2] == CorrectCombination[1]) || (CorrectCombination[2] == CorrectCombination[0]));
+
+            // Generate the fourth colour (random colour except the first three)
+            do
+            {
+                CorrectCombination[3] = randomColour.Next(0, 6);
+            } while ((CorrectCombination[3] == CorrectCombination[2]) || (CorrectCombination[3] == CorrectCombination[1]) || (CorrectCombination[3] == CorrectCombination[0]));
         }
 
         void NewGame()
         {
             // Reset player guess array
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
             {
                 PlayerGuess[i] = 0;
             }
 
             // Enable all buttons
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
             {
                 ChangeButtonState(i, true);
             }
@@ -113,6 +119,7 @@ namespace CodeBreaker
             displayColour1.BackColor = Color.DarkGray;
             displayColour2.BackColor = Color.DarkGray;
             displayColour3.BackColor = Color.DarkGray;
+            displayColour4.BackColor = Color.DarkGray;
         }
 
         void ResetButtonColours()
@@ -122,6 +129,7 @@ namespace CodeBreaker
             btnColour2.BackColor = CombinationColour[2];
             btnColour3.BackColor = CombinationColour[3];
             btnColour4.BackColor = CombinationColour[4];
+            btnColour5.BackColor = CombinationColour[5];
         }
 
         void ChangeDifficulty()
@@ -223,6 +231,17 @@ namespace CodeBreaker
                         btnColour4.BackColor = Color.FromArgb(64, 64, 64);
                     }
                     break;
+                case 5:
+                    btnColour4.Enabled = NewState;
+                    if (NewState)
+                    {
+                        btnColour4.BackColor = CombinationColour[5];
+                    }
+                    else
+                    {
+                        btnColour4.BackColor = Color.FromArgb(64, 64, 64);
+                    }
+                    break;
             }
         }
 
@@ -259,6 +278,11 @@ namespace CodeBreaker
                     PlayerGuess[2] = ButtonIndex;
                     ChangeButtonState(ButtonIndex, false);
                     break;
+                case 4:
+                    displayColour4.BackColor = CombinationColour[ButtonIndex];
+                    PlayerGuess[3] = ButtonIndex;
+                    ChangeButtonState(ButtonIndex, false);
+                    break;
                 default:
                     MessageBox.Show("InternalTurns is an illegal number: " + InternalTurns.ToString(), "ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -268,7 +292,7 @@ namespace CodeBreaker
             InternalTurns++;
 
             // End of turn
-            if (InternalTurns > 3)
+            if (InternalTurns > 4)
             {
                 InternalTurns = 1;
 
@@ -278,7 +302,7 @@ namespace CodeBreaker
 
                 ResetButtonColours();
 
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     ChangeButtonState(i, true);
                 }
@@ -289,7 +313,7 @@ namespace CodeBreaker
                 // How many correct colours are in the correct place?
                 CorrectPlacement = 0;
 
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     if (PlayerGuess[i] == CorrectCombination[i])
                     {
@@ -302,9 +326,9 @@ namespace CodeBreaker
                 // How many correct colours are in the wrong place
                 CorrectColour = 0;
 
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
-                    for (int j = 0; j < 3; j++)
+                    for (int j = 0; j < 4; j++)
                     {
                         if (i != j)
                         {
@@ -319,21 +343,21 @@ namespace CodeBreaker
                 displayCorrectColour.Text = CorrectColour.ToString();
 
                 // Was the correct combination found?
-                if ((Turns >= 0) && (CorrectPlacement == 3))
+                if ((Turns >= 0) && (CorrectPlacement == 4))
                 {
                     MessageBox.Show("You found the correct combination!", "Success!");
                     EndOfGame = true;
                 }
 
                 // Was the correct combination not found?
-                if ((Turns == 0) && (CorrectPlacement != 3))
+                if ((Turns == 0) && (CorrectPlacement != 4))
                 {
                     MessageBox.Show("You did not find the correct combination!", "Failure!");
                     EndOfGame = true;
                 }
 
                 // Enable all buttons
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     ChangeButtonState(i, true);
                 }
