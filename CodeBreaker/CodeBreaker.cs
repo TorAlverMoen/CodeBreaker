@@ -26,6 +26,10 @@ namespace CodeBreaker
 
         int Difficulty = 0;     // 0 (easy) -> 5 turns, 1 (moderate) -> 10 turns, 2 (difficult) -> 20 turns
 
+        string diff_difficult = "hard";
+        string diff_moderate = "medium";
+        string diff_easy = "easy";
+
         bool EndOfGame = false;
         bool IsNewGameStarted = false;
 
@@ -94,15 +98,15 @@ namespace CodeBreaker
             {
                 case 0:
                     Turns = 5;
-                    displayDifficulty.Text = "difficult";
+                    displayDifficulty.Text = diff_difficult;
                     break;
                 case 1:
                     Turns = 10;
-                    displayDifficulty.Text = "moderate";
+                    displayDifficulty.Text = diff_moderate;
                     break;
                 case 2:
                     Turns = 20;
-                    displayDifficulty.Text = "easy";
+                    displayDifficulty.Text = diff_easy;
                     break;
             }
 
@@ -146,13 +150,13 @@ namespace CodeBreaker
             switch (Difficulty)
             {
                 case 0:
-                    tempDifficulty = "Difficult";
+                    tempDifficulty = diff_difficult;
                     break;
                 case 1:
-                    tempDifficulty = "Moderate";
+                    tempDifficulty = diff_moderate;
                     break;
                 case 2:
-                    tempDifficulty = "Easy";
+                    tempDifficulty = diff_easy;
                     break;
             }
 
