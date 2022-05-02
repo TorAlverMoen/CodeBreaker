@@ -301,7 +301,9 @@ namespace CodeBreaker
                 InternalTurns = 1;
 
                 // Used for debugging: This will display the correct combination and the current player choice
-                 MessageBox.Show(CorrectCombination[0] + " " + CorrectCombination[1] + " " + CorrectCombination[2] + " " + CorrectCombination[3] + " - " + PlayerGuess[0] + " " + PlayerGuess[1] + " " + PlayerGuess[2] + " " + PlayerGuess[3]);
+                /*MessageBox.Show(CorrectCombination[0] + " " + CorrectCombination[1] + " " +
+                    CorrectCombination[2] + " " + CorrectCombination[3] + " - " +
+                    PlayerGuess[0] + " " + PlayerGuess[1] + " " + PlayerGuess[2] + " " + PlayerGuess[3]);*/
 
                 ResetButtonColours();
 
