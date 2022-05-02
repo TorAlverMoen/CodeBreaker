@@ -1,4 +1,4 @@
 # Code Breaker
-I am working on a puzzle game and this is a "dry run" for one of the puzzles.
+This was a test for a possible puzzle to be included in another game but has since evolved into its own little game.
 
 (Visual Studio 2022)
