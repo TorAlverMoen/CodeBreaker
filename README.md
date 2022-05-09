@@ -1,4 +1,7 @@
 # Code Breaker
+
+Guess the correct code / colour combination!
+
 This was a test for a possible puzzle to be included in another game but has since evolved into its own little game.
 
 Here is how to play:
