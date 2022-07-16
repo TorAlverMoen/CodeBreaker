@@ -178,14 +178,14 @@
             this.labelCorrectPlacement.AutoSize = true;
             this.labelCorrectPlacement.Location = new System.Drawing.Point(200, 243);
             this.labelCorrectPlacement.Name = "labelCorrectPlacement";
-            this.labelCorrectPlacement.Size = new System.Drawing.Size(253, 17);
+            this.labelCorrectPlacement.Size = new System.Drawing.Size(301, 17);
             this.labelCorrectPlacement.TabIndex = 10;
-            this.labelCorrectPlacement.Text = "Number of colours in the correct place:";
+            this.labelCorrectPlacement.Text = "Number of correct colours in the correct place:";
             // 
             // displayCorrectPlacement
             // 
             this.displayCorrectPlacement.AutoSize = true;
-            this.displayCorrectPlacement.Location = new System.Drawing.Point(450, 243);
+            this.displayCorrectPlacement.Location = new System.Drawing.Point(498, 243);
             this.displayCorrectPlacement.Name = "displayCorrectPlacement";
             this.displayCorrectPlacement.Size = new System.Drawing.Size(50, 17);
             this.displayCorrectPlacement.TabIndex = 11;
@@ -341,7 +341,7 @@
             this.btn_HowToPlay.Name = "btn_HowToPlay";
             this.btn_HowToPlay.Size = new System.Drawing.Size(140, 40);
             this.btn_HowToPlay.TabIndex = 25;
-            this.btn_HowToPlay.Text = "[button]";
+            this.btn_HowToPlay.Text = "How to play";
             this.btn_HowToPlay.UseVisualStyleBackColor = false;
             this.btn_HowToPlay.Click += new System.EventHandler(this.btn_HowToPlay_Click);
             // 
