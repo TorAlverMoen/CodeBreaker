@@ -421,6 +421,12 @@ namespace CodeBreaker
             NewGame();
         }
 
+        private void btn_HowToPlay_Click(object sender, EventArgs e)
+        {
+            HowToPlay rulesBox = new HowToPlay();
+            rulesBox.Show();
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();

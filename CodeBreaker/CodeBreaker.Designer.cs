@@ -54,6 +54,7 @@
             this.displayDifficulty = new System.Windows.Forms.Label();
             this.displayColour4 = new System.Windows.Forms.Label();
             this.btnColour5 = new System.Windows.Forms.Button();
+            this.btn_HowToPlay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -220,7 +221,7 @@
             // displayTurns
             // 
             this.displayTurns.AutoSize = true;
-            this.displayTurns.Location = new System.Drawing.Point(380, 293);
+            this.displayTurns.Location = new System.Drawing.Point(376, 293);
             this.displayTurns.Name = "displayTurns";
             this.displayTurns.Size = new System.Drawing.Size(43, 17);
             this.displayTurns.TabIndex = 15;
@@ -231,9 +232,9 @@
             this.btnDifficulty.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnDifficulty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDifficulty.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDifficulty.Location = new System.Drawing.Point(130, 380);
+            this.btnDifficulty.Location = new System.Drawing.Point(70, 381);
             this.btnDifficulty.Name = "btnDifficulty";
-            this.btnDifficulty.Size = new System.Drawing.Size(150, 40);
+            this.btnDifficulty.Size = new System.Drawing.Size(140, 40);
             this.btnDifficulty.TabIndex = 16;
             this.btnDifficulty.Text = "Change difficulty";
             this.btnDifficulty.UseVisualStyleBackColor = false;
@@ -244,9 +245,9 @@
             this.btnAbout.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAbout.Location = new System.Drawing.Point(290, 380);
+            this.btnAbout.Location = new System.Drawing.Point(220, 381);
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(150, 40);
+            this.btnAbout.Size = new System.Drawing.Size(140, 40);
             this.btnAbout.TabIndex = 17;
             this.btnAbout.Text = "About";
             this.btnAbout.UseVisualStyleBackColor = false;
@@ -257,9 +258,9 @@
             this.btnNewGame.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewGame.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNewGame.Location = new System.Drawing.Point(450, 380);
+            this.btnNewGame.Location = new System.Drawing.Point(370, 381);
             this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(150, 40);
+            this.btnNewGame.Size = new System.Drawing.Size(140, 40);
             this.btnNewGame.TabIndex = 18;
             this.btnNewGame.Text = "New game";
             this.btnNewGame.UseVisualStyleBackColor = false;
@@ -270,9 +271,9 @@
             this.btnExit.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnExit.Location = new System.Drawing.Point(610, 380);
+            this.btnExit.Location = new System.Drawing.Point(670, 381);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(150, 40);
+            this.btnExit.Size = new System.Drawing.Size(140, 40);
             this.btnExit.TabIndex = 19;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -331,12 +332,26 @@
             this.btnColour5.UseVisualStyleBackColor = false;
             this.btnColour5.Click += new System.EventHandler(this.btnColour5_Click);
             // 
+            // btn_HowToPlay
+            // 
+            this.btn_HowToPlay.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn_HowToPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HowToPlay.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_HowToPlay.Location = new System.Drawing.Point(520, 381);
+            this.btn_HowToPlay.Name = "btn_HowToPlay";
+            this.btn_HowToPlay.Size = new System.Drawing.Size(140, 40);
+            this.btn_HowToPlay.TabIndex = 25;
+            this.btn_HowToPlay.Text = "[button]";
+            this.btn_HowToPlay.UseVisualStyleBackColor = false;
+            this.btn_HowToPlay.Click += new System.EventHandler(this.btn_HowToPlay_Click);
+            // 
             // CodeBreaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(884, 461);
+            this.Controls.Add(this.btn_HowToPlay);
             this.Controls.Add(this.btnColour5);
             this.Controls.Add(this.displayColour4);
             this.Controls.Add(this.displayDifficulty);
@@ -404,6 +419,7 @@
         private System.Windows.Forms.Label displayDifficulty;
         private System.Windows.Forms.Label displayColour4;
         private System.Windows.Forms.Button btnColour5;
+        private System.Windows.Forms.Button btn_HowToPlay;
     }
 }
 
