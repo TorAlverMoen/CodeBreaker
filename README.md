@@ -6,6 +6,8 @@ Guess the correct code / colour combination!
 
 This was a test for a possible puzzle to be included in another game but has since evolved into its own little game.
 
+In version 1.x.x.x there are three colours in the combination and in version 2.x.x.x there are four. The difficulty is the same so this makes version 2 slightly more difficult.
+
 Here is how to play:
 
 The player tries to guess the pattern, in both order and colour, within the turns allowed by the difficulty level.
