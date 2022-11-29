@@ -14,6 +14,7 @@ namespace CodeBreaker
 
         // The colours the player can choose from
         Color[] CombinationColour = { Color.DarkRed, Color.DarkOrange, Color.DarkCyan, Color.DarkGreen, Color.DarkBlue, Color.DarkViolet };
+        int[] CombinationColourIndex = { 0, 1, 2, 3, 4, 5 };
 
         int[] PlayerGuess = { 0, 0, 0, 0 };
         int[] CorrectCombination = { 0, 0, 0, 0 };
@@ -42,28 +43,22 @@ namespace CodeBreaker
 
         void GenerateCorrectCombination()
         {
-            Random randomColour = new Random();
+            Random rndIdx = new Random();
 
-            // Generate first colour
-            CorrectCombination[0] = randomColour.Next(0, 6);
-
-            // Genereate the second colour (random colour except the first)
-            do
+            for (int i = 0;i < CombinationColourIndex.Length;i++)
             {
-                CorrectCombination[1] = randomColour.Next(0, 6);
-            } while (CorrectCombination[1] == CorrectCombination[0]);
+                int randomIndex = rndIdx.Next(CombinationColourIndex.Length);
+                int tempNums = CombinationColourIndex[randomIndex];
+                CombinationColourIndex[randomIndex] = CombinationColourIndex[i];
+                CombinationColourIndex[i] = tempNums;
+            }
 
-            // Generate the third colour (random colour except the first two)
-            do
-            {
-                CorrectCombination[2] = randomColour.Next(0, 6);
-            } while ((CorrectCombination[2] == CorrectCombination[1]) || (CorrectCombination[2] == CorrectCombination[0]));
+            int tempStartIndex = rndIdx.Next(0, 2);
 
-            // Generate the fourth colour (random colour except the first three)
-            do
+            for (int i = 0; i < CorrectCombination.Length; i++)
             {
-                CorrectCombination[3] = randomColour.Next(0, 6);
-            } while ((CorrectCombination[3] == CorrectCombination[2]) || (CorrectCombination[3] == CorrectCombination[1]) || (CorrectCombination[3] == CorrectCombination[0]));
+                CorrectCombination[i] = CombinationColourIndex[i + tempStartIndex];
+            }
         }
 
         void NewGame()
