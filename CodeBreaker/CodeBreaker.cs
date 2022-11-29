@@ -45,7 +45,7 @@ namespace CodeBreaker
         {
             Random rndIdx = new Random();
 
-            for (int i = 0;i < CombinationColourIndex.Length;i++)
+            for (int i = 0; i < CombinationColourIndex.Length; i++)
             {
                 int randomIndex = rndIdx.Next(CombinationColourIndex.Length);
                 int tempNums = CombinationColourIndex[randomIndex];
