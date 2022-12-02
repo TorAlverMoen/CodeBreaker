@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -408,7 +409,11 @@ namespace CodeBreaker
         private void btnAbout_Click(object sender, EventArgs e)
         {
             AboutBox1 aboutBox = new AboutBox1();
-            aboutBox.Show();
+
+            if (!Application.OpenForms.OfType<AboutBox1>().Any())
+            {
+                aboutBox.Show();
+            }
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
@@ -419,7 +424,11 @@ namespace CodeBreaker
         private void btn_HowToPlay_Click(object sender, EventArgs e)
         {
             HowToPlay rulesBox = new HowToPlay();
-            rulesBox.Show();
+
+            if (!Application.OpenForms.OfType<HowToPlay>().Any())
+            {
+                rulesBox.Show();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
