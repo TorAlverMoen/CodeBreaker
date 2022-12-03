@@ -185,6 +185,7 @@
             // displayCorrectPlacement
             // 
             this.displayCorrectPlacement.AutoSize = true;
+            this.displayCorrectPlacement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.displayCorrectPlacement.Location = new System.Drawing.Point(450, 243);
             this.displayCorrectPlacement.Name = "displayCorrectPlacement";
             this.displayCorrectPlacement.Size = new System.Drawing.Size(50, 17);
@@ -203,6 +204,7 @@
             // displayCorrectColour
             // 
             this.displayCorrectColour.AutoSize = true;
+            this.displayCorrectColour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.displayCorrectColour.Location = new System.Drawing.Point(515, 263);
             this.displayCorrectColour.Name = "displayCorrectColour";
             this.displayCorrectColour.Size = new System.Drawing.Size(55, 17);
