@@ -20,6 +20,8 @@ namespace CodeBreaker
         int[] PlayerGuess = { 0, 0, 0, 0 };
         int[] CorrectCombination = { 0, 0, 0, 0 };
 
+        int[,] PlayerHistory = new int[4, 10];
+
         int CorrectPlacement = 0;
         int CorrectColour = 0;
 
