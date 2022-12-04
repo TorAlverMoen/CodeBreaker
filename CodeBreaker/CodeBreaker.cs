@@ -64,6 +64,8 @@ namespace CodeBreaker
 
         void NewGame()
         {
+            resultDisplay.Text = "No result yet!";
+
             // Reset player guess array
             for (int i = 0; i < 4; i++)
             {
@@ -346,14 +348,16 @@ namespace CodeBreaker
                 // Was the correct combination found?
                 if ((Turns >= 0) && (CorrectPlacement == 4))
                 {
-                    MessageBox.Show("You found the correct combination!", "Success!");
+                    resultDisplay.ForeColor = Color.Lime;
+                    resultDisplay.Text = "Correct code!";
                     EndOfGame = true;
                 }
 
                 // Was the correct combination not found?
                 if ((Turns == 0) && (CorrectPlacement != 4))
                 {
-                    MessageBox.Show("You did not find the correct combination!", "Failure!");
+                    resultDisplay.ForeColor = Color.DarkRed;
+                    resultDisplay.Text = "Wrong code!";
                     EndOfGame = true;
                 }
 
