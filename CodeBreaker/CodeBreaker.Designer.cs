@@ -55,9 +55,6 @@
             this.displayColour4 = new System.Windows.Forms.Label();
             this.btnColour5 = new System.Windows.Forms.Button();
             this.btn_HowToPlay = new System.Windows.Forms.Button();
-            this.resultDisplay = new System.Windows.Forms.Label();
-            this.DisplayGroupBox = new System.Windows.Forms.GroupBox();
-            this.DisplayGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -350,34 +347,12 @@
             this.btn_HowToPlay.UseVisualStyleBackColor = false;
             this.btn_HowToPlay.Click += new System.EventHandler(this.btn_HowToPlay_Click);
             // 
-            // resultDisplay
-            // 
-            this.resultDisplay.AutoSize = true;
-            this.resultDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.resultDisplay.Location = new System.Drawing.Point(10, 20);
-            this.resultDisplay.Name = "resultDisplay";
-            this.resultDisplay.Size = new System.Drawing.Size(97, 31);
-            this.resultDisplay.TabIndex = 29;
-            this.resultDisplay.Text = "[result]";
-            // 
-            // DisplayGroupBox
-            // 
-            this.DisplayGroupBox.Controls.Add(this.resultDisplay);
-            this.DisplayGroupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DisplayGroupBox.Location = new System.Drawing.Point(618, 240);
-            this.DisplayGroupBox.Name = "DisplayGroupBox";
-            this.DisplayGroupBox.Size = new System.Drawing.Size(200, 70);
-            this.DisplayGroupBox.TabIndex = 30;
-            this.DisplayGroupBox.TabStop = false;
-            this.DisplayGroupBox.Text = "The result";
-            // 
             // CodeBreaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.DisplayGroupBox);
             this.Controls.Add(this.btn_HowToPlay);
             this.Controls.Add(this.btnColour5);
             this.Controls.Add(this.displayColour4);
@@ -414,8 +389,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Breaker";
             this.Load += new System.EventHandler(this.CodeBreaker_Load);
-            this.DisplayGroupBox.ResumeLayout(false);
-            this.DisplayGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,8 +422,6 @@
         private System.Windows.Forms.Label displayColour4;
         private System.Windows.Forms.Button btnColour5;
         private System.Windows.Forms.Button btn_HowToPlay;
-        private System.Windows.Forms.Label resultDisplay;
-        private System.Windows.Forms.GroupBox DisplayGroupBox;
     }
 }
 
