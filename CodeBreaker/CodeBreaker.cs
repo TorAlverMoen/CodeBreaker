@@ -161,14 +161,14 @@ namespace CodeBreaker
             // Change the difficulty (update automatically if a new game was just started)
             if (IsNewGameStarted)
             {
-                MessageBox.Show("The difficulty is changed to " + tempDifficulty, "Change difficulty",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                NewGame();
+                /*MessageBox.Show("The difficulty is changed to " + tempDifficulty, "Change difficulty",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+                NewGame();  // The difficulty is not updated unless we start a new game
             }
             else
             {
-                MessageBox.Show("The difficulty is changed to " + tempDifficulty +
-                    "\n\nYou must start a new game for change to take effect!",
+                MessageBox.Show("The difficulty will be changed to " + tempDifficulty +
+                    "\nthe next time you start a new game!",
                     "Change difficulty", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
