@@ -1,6 +1,6 @@
 ### Code Breaker - Guess the code / colour combination!
 
-Release v2.8.0.0 can be found [here](url)
+Release v2.8.0.0 can be found [here](https://github.com/TorAlverMoen/CodeBreaker/releases/tag/release-v2.8.0.0)
 
 ![Screenshot](doc/screenshot.png)
 
