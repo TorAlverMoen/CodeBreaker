@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -118,20 +119,22 @@ namespace CodeBreaker
 
         void DisableColourLabels()
         {
-            displayColour1.BackColor = Color.DarkGray;
-            displayColour2.BackColor = Color.DarkGray;
-            displayColour3.BackColor = Color.DarkGray;
-            displayColour4.BackColor = Color.DarkGray;
+            Label[] displayColourLabels = { displayColour1, displayColour2, displayColour3, displayColour4 };
+
+            for (int i = 0; i < displayColourLabels.Length; i++)
+            {
+                displayColourLabels[i].BackColor = Color.DarkGray;
+            }
         }
 
         void ResetButtonColours()
         {
-            btnColour0.BackColor = CombinationColour[0];
-            btnColour1.BackColor = CombinationColour[1];
-            btnColour2.BackColor = CombinationColour[2];
-            btnColour3.BackColor = CombinationColour[3];
-            btnColour4.BackColor = CombinationColour[4];
-            btnColour5.BackColor = CombinationColour[5];
+            Button[] colourButtons = { btnColour0, btnColour1, btnColour2, btnColour3, btnColour4, btnColour5 };
+
+            for (int i = 0; i < colourButtons.Length; i++)
+            {
+                colourButtons[i].BackColor = CombinationColour[i];
+            }
         }
 
         void ChangeDifficulty()
